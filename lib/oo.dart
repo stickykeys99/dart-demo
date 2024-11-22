@@ -18,15 +18,16 @@ class Animal {
 }
 
 class Pet extends Animal {
-  const Pet(super.name, {required super.ownerName});
+  const Pet(super.name, {required String ownerName})
+      : super(ownerName: ownerName);
 }
 
 abstract class MakesSound {
   void makeSound();
 }
 
-class Dog extends Animal implements MakesSound {
-  const Dog(super.name, {super.ownerName});
+class Dog extends Pet implements MakesSound {
+  const Dog(super.name, {required super.ownerName});
 
   @override
   void makeSound() {
@@ -51,7 +52,7 @@ class Human extends Animal with Thought, Creativity {
 void main() {
   var animal = Animal('Spot');
   var pet = Pet('Garfield', ownerName: 'Jon');
-  var dog = Dog('Laika');
+  var dog = Dog('Blue', ownerName: 'Steve');
   dog.makeSound();
   var human = Human('Descartes');
   human.think();
