@@ -1,3 +1,13 @@
+class Point {
+  final num x;
+  final num y;
+  final num? z;
+
+  int get numDimensions => (z == null) ? 2 : 3;
+
+  const Point(this.x, this.y, [this.z]);
+}
+
 class Animal {
   final String name;
   final String? _ownerName;
@@ -36,16 +46,6 @@ mixin Creativity {
 
 class Human extends Animal with Thought, Creativity {
   Human(super.name);
-}
-
-class Point {
-  final num x;
-  final num y;
-  final num? z;
-
-  int get numDimensions => (z == null) ? 2 : 3;
-
-  const Point(this.x, this.y, [this.z]);
 }
 
 void main() {
