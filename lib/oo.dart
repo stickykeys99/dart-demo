@@ -18,7 +18,7 @@ class Animal {
 }
 
 class Pet extends Animal {
-  const Pet(super.name, {required String super.ownerName});
+  const Pet(super.name, {required super.ownerName});
 }
 
 abstract class MakesSound {
