@@ -16,14 +16,14 @@ void main() {
 
   switch (op) {
     case '+':
-      return print('${a + b}');
+      return print(a + b);
     case '-':
-      return print('${a - b}');
+      return print(a - b);
     case '*':
-      return print('${a * b}');
+      return print(a * b);
     case '/':
       if (b == 0) return print('Cannot divide by zero.');
-      return print('${a / b}');
+      return print(a / b);
     default:
   }
 }
